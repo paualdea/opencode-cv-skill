@@ -1,11 +1,20 @@
 ---
 name: CV LaTeX Tailor
-description: Adapta y compila currículums en formato LaTeX y PDF a partir de un perfil maestro y una oferta de empleo, identificando brechas técnicas y consultando detalles omitidos para maximizar la afinidad.
+description: Adapta currículums en formato LaTeX a partir de un perfil maestro y una oferta de empleo, identificando brechas técnicas y consultando detalles omitidos para maximizar la afinidad.
 ---
 
 ## Objetivo
 
-Generar un currículum vitae adaptado a una oferta laboral específica a partir del perfil maestro en `references/perfil.md` y la plantilla base en `templates/plantilla.tex`, compilando opcionalmente el resultado a `.pdf`.
+Generar un archivo `cv.tex` adaptado a una oferta laboral específica a partir del perfil maestro en `references/perfil.md` y la plantilla base en `templates/plantilla.tex`.
+
+---
+
+## Reglas fijas e inquebrantables
+
+1. **Datos de contacto obligatorios:** En el bloque de cabecera o datos de contacto, incluir **siempre** el teléfono `+34 659 33 29 93` junto con el resto de datos de contacto del perfil.
+2. **Sin resumen profesional:** **Eliminar y omitir por completo** cualquier sección, párrafo o bloque de tipo "Resumen ejecutivo", "Perfil profesional", "Sobre mí" o "Professional Summary". El contenido debe empezar directamente por la formación o la experiencia.
+3. **Filtrado estricto de experiencia:** Descartar activamente cualquier experiencia laboral, rol o proyecto que no aporte valor técnico directo ni guarde relación con la vacante. Menos es más: incluir únicamente lo que sume puntos de afinidad.
+4. **Límite estricto de 1 sola página:** El documento final **DEBE ocupar exactamente 1 página**. No se admite desborde a una segunda página en Overleaf. La cantidad de viñetas, la longitud de las líneas y los espaciados verticales deben ajustarse rigurosamente a esta restricción.
 
 ---
 
@@ -16,49 +25,38 @@ Generar un currículum vitae adaptado a una oferta laboral específica a partir 
 2. Si no se ha proporcionado, solicítala expresamente y no continúes con los pasos siguientes hasta recibirla.
 
 ### 2. Carga de recursos
-1. Lee íntegramente el historial y perfil maestro en `references/perfil.md`.
-2. Lee la estructura, paquetes y comandos de la plantilla en `templates/plantilla.tex`.
+1. Lee íntegramente el perfil maestro en `references/perfil.md`.
+2. Lee la estructura, comandos y paquetes de la plantilla en `templates/plantilla.tex`.
 
-### 3. Análisis de coincidencia (Gap Analysis)
+### 3. Análisis de coincidencia (Gap Analysis) y selección
 1. Extrae de la oferta:
    * Requisitos obligatorios y deseables.
-   * Palabras clave técnicas (tecnologías, herramientas, protocolos, sistemas).
-   * Habilidades metodológicas y blandas requeridas.
-2. Cruza estos requisitos con `references/perfil.md` y clasifica:
-   * **Puntos fuertes:** Experiencias y competencias directas ya reflejadas.
-   * **Brechas o puntos ausentes:** Requisitos clave de la oferta que no figuran en el perfil o están redactados de forma muy genérica.
+   * Palabras clave técnicas (tecnologías, herramientas, protocolos, sistemas, metodologías).
+2. Cruza estos requisitos con `references/perfil.md`:
+   * Identifica qué experiencias y proyectos tienen impacto directo sobre los requisitos de la vacante.
+   * **Marca para descarte** aquellas experiencias que no aporten valor relevante a la oferta.
+   * Detecta brechas técnicas: requisitos de la oferta ausentes en el perfil o poco desarrollados.
 
 ### 4. Preguntas de alineación técnica (PASO OBLIGATORIO)
-**Detén la ejecución antes de escribir el archivo `.tex`.** Formula entre 3 y 10 preguntas directas y concretas al usuario sobre las brechas detectadas:
-1. Herramientas, tecnologías o servicios de la oferta no presentes en `perfil.md` con los que el usuario haya tenido contacto (homelab, proyectos personales, soporte o formación).
-2. Metodologías, flujos de trabajo o arquitecturas requeridas donde pueda tener experiencia práctica aplicable.
+**Detén la ejecución antes de redactar el código LaTeX.** Formula entre 3 y 10 preguntas directas y concisas al usuario sobre las brechas detectadas:
+1. Herramientas, tecnologías o servicios requeridos en la oferta no presentes en `perfil.md` con los que el usuario haya tenido contacto (homelab, proyectos personales, soporte o formación).
+2. Metodologías, entornos o funciones requeridas donde pueda tener experiencia práctica aplicable.
 3. Certificaciones, carnés, disponibilidad o idiomas requeridos que no consten explícitamente.
 
-> **Regla estricta:** Espera siempre la respuesta del usuario a estas preguntas antes de proceder al paso 5.
+> **Regla estricta:** Espera siempre la respuesta del usuario a estas preguntas antes de proceder a la redacción del currículum.
 
 ### 5. Generación del documento LaTeX
 Una vez recibidas las respuestas o la confirmación del usuario para avanzar:
 
-1. **Adaptación estratégica del contenido:**
-   * Prioriza y reordena la experiencia (siempre respetando el orden crónologico), proyectos y tecnologías según la relevancia para la oferta, si hay experiencias o datos irrelevantes quitalos para no sobrecargar el CV.
-   * Incorpora orgánicamente las respuestas aportadas por el usuario en el paso 4.
-   * Redacta las viñetas con foco en logros e impacto: verbo de acción + contexto técnico + resultado cuantificable o mejora.
-2. **Buenas prácticas de LaTeX:**
+1. **Estructura y contenido:**
+   * **Contacto:** Inserta siempre el teléfono `+34 659 33 29 93`.
+   * **Perfil:** Ocmite cualquier bloque de resumen personal o ejecutivo.
+   * **Experiencia:** Incluye únicamente los puestos relevantes para la oferta, redactando entre 2 y 4 viñetas de alto impacto por puesto (acción + tecnología + resultado cuantificable).
+   * **Proyectos / Habilidades:** Prioriza tecnologías coincidentes con las palabras clave de la vacante.
+2. **Sintaxis y ajuste de página:**
    * Respeta los paquetes, dimensiones, comandos y estilos definidos en `templates/plantilla.tex`.
-   * Escapa rigurosamente los caracteres especiales en el texto: `%`, `_`, `&`, `#`, `$`, `{`, `}`.
-   * Controla la densidad del texto para ajustarse estrictamente a la extensión deseada (mantener el documento en 1 sola página salvo indicación contraria).
-3. **Escritura:** Guarda el resultado como `cv.tex` (o con el nombre que especifique el usuario).
-
-### 6. Compilación a PDF y limpieza
-1. Inspecciona si el sistema dispone de herramientas de compilación ejecutando comprobaciones en el entorno:
-   * Comprobar `tectonic` (`which tectonic`).
-   * Comprobar `latexmk` (`which latexmk`).
-   * Comprobar `pdflatex` (`which pdflatex`).
-2. **Si existe compilador:**
-   * **Con Tectonic:** Ejecuta `tectonic cv.tex`.
-   * **Con Latexmk:** Ejecuta `latexmk -pdf -interaction=nonstopmode cv.tex`.
-   * **Con Pdflatex:** Ejecuta `pdflatex -interaction=nonstopmode cv.tex` (dos pasadas para resolver referencias si aplica).
-   * **Limpieza:** Elimina los artefactos temporales si se utilizó `latexmk` o `pdflatex` (`.aux`, `.log`, `.out`, `.fls`, `.fdb_latexmk`).
-   * Confirma la generación de `cv.pdf` e indica el porcentaje estimado de match obtenido.
-3. **Si no hay compilador:**
-   * Informa al usuario de que `cv.tex` está generado y listo para compilar en Overleaf o localmente siguiendo las instrucciones del `README.md`.
+   * Escapa rigurosamente los caracteres reservados de LaTeX en el texto: `%`, `_`, `&`, `#`, `$`, `{`, `}`.
+   * Modula la cantidad de viñetas y elementos para garantizar el **límite estricto de 1 página**.
+3. **Entrega:**
+   * Guarda el código generado en el archivo `cv.tex` (o muéstralo completo si el usuario solicita copiarlo directamente).
+   * Indica al usuario que el código está listo para pegar y compilar en Overleaf junto con un breve resumen de las decisiones de adaptación tomadas y el porcentaje estimado de match obtenido.
