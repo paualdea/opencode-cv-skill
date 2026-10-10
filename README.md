@@ -8,6 +8,16 @@ Compara los requisitos de la vacante frente a tu historial profesional, detecta 
 
 ---
 
+## Vincular la *skill* con **OpenCode**
+
+```bash
+# Creamos el directorio de skills (si no esta creado)
+mkdir -p ~/.config/opencode/skills
+
+# Creamos el enlace simbólico hacia este repositorio
+ln -s ./ (o la ruta en donde hayas clonado este repositorio) ~/.config/opencode/skills/cv-latex
+```
+
 ## Estructura del repositorio
 
 ```text
