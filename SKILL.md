@@ -17,7 +17,7 @@ Generar un archivo `cv.tex` adaptado a una oferta laboral específica a partir d
 4. **Orden cronológico inverso obligatorio:** Las experiencias laborales seleccionadas **DEBEN ordenarse estrictamente de más reciente a más antigua (cronología inversa)**, sin excepciones. Jamás desordenar las fechas para priorizar puestos. Si se desea destacar un rol pasado, se le dará mayor extensión y viñetas de impacto, pero siempre respetando su posición temporal. 
 5. **Límite estricto de 1 sola página:** El documento final **DEBE ocupar exactamente 1 página**. No se admite desborde a una segunda página en Overleaf. La cantidad de viñetas, la longitud de las líneas y los espaciados verticales deben ajustarse rigurosamente a esta restricción.
 6. **Prohibido subtítulo o titular profesional:** En la cabecera del documento, incluir **únicamente** el nombre completo y la línea de datos de contacto (teléfono, email, enlaces, ubicación). **Está estrictamente prohibido añadir cualquier tipo de subtítulo, lema, titular profesional, rol o ristra de etiquetas/palabras clave** (por ejemplo: *"Técnico Helpdesk | Soporte Windows | Redes"* o similares) debajo del nombre o de los datos de contacto. El documento debe pasar directamente de la cabecera a la primera sección formal (Educación o Experiencia).
-
+7. **Coherencia verbal y ortografía estricta:** Todas las viñetas de experiencia deben mantener **estricta coherencia gramatical y temporal**. Se debe usar siempre el mismo patrón en todo el documento: **primera persona del singular en pretérito perfecto simple** (ej.: *«Administré...»*, *«Configuré...»*, *«Resolví...»*) o **estilo nominal de acción** (ej.: *«Administración de...»*, *«Configuración de...»*), sin mezclarlos jamás. Cero faltas de ortografía o concordancia.
 ---
 
 ## Flujo de trabajo
@@ -63,3 +63,9 @@ Una vez recibidas las respuestas o la confirmación del usuario para avanzar:
 3. **Entrega:**
    * Guarda el código generado en el archivo `cv.tex` (o muéstralo completo si el usuario solicita copiarlo directamente).
    * Indica al usuario que el código está listo para pegar y compilar en Overleaf junto con un breve resumen de las decisiones de adaptación tomadas y el porcentaje estimado de match obtenido.
+
+### 6. Control de calidad y verificación previa (Checklist)
+Antes de dar por finalizado el archivo `cv.tex`, realiza una pasada de revisión obligatoria:
+* [ ] **Tiempos verbales:** ¿Todas las viñetas empiezan con la misma estructura gramatical? ¿Hay concordancia perfecta de persona y número?
+* [ ] **Ortografía y tildes:** ¿Se han revisado palabras técnicas castellanizadas y tildes dudosas (ej.: *parametricé*, *configuré*)?
+* [ ] **Extensión:** ¿El volumen de texto asegura al 100% que no habrá desborde a una segunda página?
