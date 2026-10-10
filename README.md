@@ -5,6 +5,9 @@ Genera un CV en formato `.tex` usando la plantilla **LaTeX** de *Jake's Resume*.
 
 Compara los requisitos de la vacante frente a tu historial profesional, detecta brechas técnicas, formula preguntas para maximizar las posibilidades y genera un archivo LaTeX.
 
+> [!TIP]
+> Se recomienda instalar un compilador de LaTeX cómo: **tectonic**, **latexmk** o **pdflatex**.
+
 ---
 
 ## Vincular la *skill* con **OpenCode**
