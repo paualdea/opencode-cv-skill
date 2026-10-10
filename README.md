@@ -1,9 +1,9 @@
 # CV LaTeX (OpenCode Skill)
 
-Skill para [OpenCode](https://opencode.ai) diseñada para adaptar ofertas de empleo específicas usando el perfil profesional del usuario. Genera un CV en formato `PDF` usando una plantilla LaTeX.
+Skill para [OpenCode](https://opencode.ai) diseñada para adaptar ofertas de empleo específicas usando el perfil profesional del usuario. Genera un CV en formato `PDF` usando una plantilla **LaTeX**.
 Compara los requisitos de la vacante frente a tu historial profesional, detecta brechas técnicas, formula preguntas para maximizar las posibilidades, genera el archivo `.tex` y luego el `.pdf` en caso de que se cumplan los requisitos.
 
-> **Nota:** 
+> [!TIP]
 > Se recomienda instalar un compilador de LaTeX cómo: **tectonic**, **latexmk** o **pdflatex**.
 
 ---
