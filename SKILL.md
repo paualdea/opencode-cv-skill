@@ -16,6 +16,7 @@ Generar un archivo `cv.tex` adaptado a una oferta laboral específica a partir d
 3. **Filtrado estricto de experiencia:** Descartar activamente cualquier experiencia laboral, rol o proyecto que no aporte valor técnico directo ni guarde relación con la vacante. Menos es más: incluir únicamente lo que sume puntos de afinidad.
 4. **Orden cronológico inverso obligatorio:** Las experiencias laborales seleccionadas **DEBEN ordenarse estrictamente de más reciente a más antigua (cronología inversa)**, sin excepciones. Jamás desordenar las fechas para priorizar puestos. Si se desea destacar un rol pasado, se le dará mayor extensión y viñetas de impacto, pero siempre respetando su posición temporal. 
 5. **Límite estricto de 1 sola página:** El documento final **DEBE ocupar exactamente 1 página**. No se admite desborde a una segunda página en Overleaf. La cantidad de viñetas, la longitud de las líneas y los espaciados verticales deben ajustarse rigurosamente a esta restricción.
+6. **Prohibido subtítulo o titular profesional:** En la cabecera del documento, incluir **únicamente** el nombre completo y la línea de datos de contacto (teléfono, email, enlaces, ubicación). **Está estrictamente prohibido añadir cualquier tipo de subtítulo, lema, titular profesional, rol o ristra de etiquetas/palabras clave** (por ejemplo: *"Técnico Helpdesk | Soporte Windows | Redes"* o similares) debajo del nombre o de los datos de contacto. El documento debe pasar directamente de la cabecera a la primera sección formal (Educación o Experiencia).
 
 ---
 
@@ -51,6 +52,7 @@ Una vez recibidas las respuestas o la confirmación del usuario para avanzar:
 
 1. **Estructura y contenido:**
    * **Contacto:** Inserta siempre el teléfono `+34 659 33 29 93`.
+   * **Cabecera limpia:** Mantener únicamente el bloque con tu nombre y enlaces/contacto. No generar líneas intermedias de presentación de rol o palabras clave separadas por barras (`|`).
    * **Perfil:** Ocmite cualquier bloque de resumen personal o ejecutivo.
    * **Experiencia:** Incluye únicamente los puestos relevantes para la oferta, redactando entre 2 y 4 viñetas de alto impacto por puesto (acción + tecnología + resultado cuantificable).
    * **Proyectos / Habilidades:** Prioriza tecnologías coincidentes con las palabras clave de la vacante.
