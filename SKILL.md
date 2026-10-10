@@ -18,6 +18,7 @@ Generar un archivo `cv.tex` adaptado a una oferta laboral específica a partir d
 5. **Límite estricto de 1 sola página:** El documento final **DEBE ocupar exactamente 1 página**. No se admite desborde a una segunda página en Overleaf. La cantidad de viñetas, la longitud de las líneas y los espaciados verticales deben ajustarse rigurosamente a esta restricción.
 6. **Prohibido subtítulo o titular profesional:** En la cabecera del documento, incluir **únicamente** el nombre completo y la línea de datos de contacto (teléfono, email, enlaces, ubicación). **Está estrictamente prohibido añadir cualquier tipo de subtítulo, lema, titular profesional, rol o ristra de etiquetas/palabras clave** (por ejemplo: *"Técnico Helpdesk | Soporte Windows | Redes"* o similares) debajo del nombre o de los datos de contacto. El documento debe pasar directamente de la cabecera a la primera sección formal (Educación o Experiencia).
 7. **Coherencia verbal y ortografía estricta:** Todas las viñetas de experiencia deben mantener **estricta coherencia gramatical y temporal**. Se debe usar siempre el mismo patrón en todo el documento: **primera persona del singular en pretérito perfecto simple** (ej.: *«Administré...»*, *«Configuré...»*, *«Resolví...»*) o **estilo nominal de acción** (ej.: *«Administración de...»*, *«Configuración de...»*), sin mezclarlos jamás. Cero faltas de ortografía o concordancia.
+8. **Codificación y compatibilidad ATS estricta:** El preámbulo debe contener obligatoriamente `\usepackage[T1]{fontenc}`, `\usepackage[utf8]{inputenc}` y `\usepackage{lmodern}` para asegurar que el texto sea 100% copiable sin glifos rotos ni acentos descompuestos (`´`, `~`). Todo el texto del documento debe escribirse en UTF-8 directo con sus tildes y eñes naturales desde el teclado (ej.: *Formación*, *España*, *Técnico*), **prohibiendo estrictamente** comandos de escape arcaicos del tipo `\'e`, `\~n` o caracteres partidos.
 ---
 
 ## Flujo de trabajo
@@ -26,9 +27,11 @@ Generar un archivo `cv.tex` adaptado a una oferta laboral específica a partir d
 1. Comprueba si el usuario ha suministrado la descripción, requisitos o enlace de la oferta de trabajo.
 2. Si no se ha proporcionado, solicítala expresamente y no continúes con los pasos siguientes hasta recibirla.
 
-### 2. Carga de recursos
+### 2. Carga y verificación previa de recursos
 1. Lee íntegramente el perfil maestro en `references/perfil.md`.
-2. Lee la estructura, comandos y paquetes de la plantilla en `templates/plantilla.tex`.
+2. Lee `templates/plantilla.tex` y **revisa de forma obligatoria el preámbulo antes de cualquier generación**:
+   * Verifica que cuenta con `\usepackage[T1]{fontenc}`, `\usepackage[utf8]{inputenc}` y `\usepackage{lmodern}`.
+   * Si faltan estos paquetes, incorpóralos automáticamente en el preámbulo del `cv.tex` resultante para evitar acentos descompuestos en el PDF.
 
 ### 3. Análisis de coincidencia (Gap Analysis) y selección
 1. Extrae de la oferta:
@@ -69,3 +72,4 @@ Antes de dar por finalizado el archivo `cv.tex`, realiza una pasada de revisión
 * [ ] **Tiempos verbales:** ¿Todas las viñetas empiezan con la misma estructura gramatical? ¿Hay concordancia perfecta de persona y número?
 * [ ] **Ortografía y tildes:** ¿Se han revisado palabras técnicas castellanizadas y tildes dudosas (ej.: *parametricé*, *configuré*)?
 * [ ] **Extensión:** ¿El volumen de texto asegura al 100% que no habrá desborde a una segunda página?
+* [ ] **Capa de texto limpia (ATS Friendly):** ¿Todos los acentos, eñes y títulos de sección (`Formación Académica`, `España`) están escritos directamente en UTF-8 y amparados por `[T1]{fontenc}` para que al copiar y pegar el texto del PDF no se separen las tildes?
