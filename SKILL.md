@@ -14,7 +14,8 @@ Generar un archivo `cv.tex` adaptado a una oferta laboral específica a partir d
 1. **Datos de contacto obligatorios:** En el bloque de cabecera o datos de contacto, incluir **siempre** el teléfono `+34 659 33 29 93` junto con el resto de datos de contacto del perfil.
 2. **Sin resumen profesional:** **Eliminar y omitir por completo** cualquier sección, párrafo o bloque de tipo "Resumen ejecutivo", "Perfil profesional", "Sobre mí" o "Professional Summary". El contenido debe empezar directamente por la formación o la experiencia.
 3. **Filtrado estricto de experiencia:** Descartar activamente cualquier experiencia laboral, rol o proyecto que no aporte valor técnico directo ni guarde relación con la vacante. Menos es más: incluir únicamente lo que sume puntos de afinidad.
-4. **Límite estricto de 1 sola página:** El documento final **DEBE ocupar exactamente 1 página**. No se admite desborde a una segunda página en Overleaf. La cantidad de viñetas, la longitud de las líneas y los espaciados verticales deben ajustarse rigurosamente a esta restricción.
+4. **Orden cronológico inverso obligatorio:** Las experiencias laborales seleccionadas **DEBEN ordenarse estrictamente de más reciente a más antigua (cronología inversa)**, sin excepciones. Jamás desordenar las fechas para priorizar puestos. Si se desea destacar un rol pasado, se le dará mayor extensión y viñetas de impacto, pero siempre respetando su posición temporal. 
+5. **Límite estricto de 1 sola página:** El documento final **DEBE ocupar exactamente 1 página**. No se admite desborde a una segunda página en Overleaf. La cantidad de viñetas, la longitud de las líneas y los espaciados verticales deben ajustarse rigurosamente a esta restricción.
 
 ---
 
