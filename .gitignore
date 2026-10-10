@@ -1,0 +1,21 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# SO y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Datos privados
+references/perfil.md
